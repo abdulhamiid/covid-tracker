@@ -16,6 +16,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.active {
+  color: orangered;
+  text-decoration: underline;
+}
+
 code {
   font-family:
     source-code-pro,
@@ -25,3 +35,4 @@ code {
     'Courier New',
     monospace;
 }
+
