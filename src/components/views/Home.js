@@ -4,33 +4,39 @@ import { Link } from 'react-router-dom';
 const continent = [
   {
     id: 1,
-    name: 'africa',
-    numberOfCountries: 54,
+    route: 'africa',
+    name: 'Africa',
+    numberOfCountries: 58,
   },
   {
     id: 2,
-    name: 'asia',
-    numberOfCountries: 30,
+    route: 'asia',
+    name: 'Asia',
+    numberOfCountries: 50,
   },
   {
     id: 3,
-    name: 'europe',
-    numberOfCountries: 5,
+    route: 'europe',
+    name: 'Europe',
+    numberOfCountries: 48,
   },
   {
     id: 4,
-    name: 'north-ameria',
-    numberOfCountries: 22,
+    route: 'north-america',
+    name: 'North America',
+    numberOfCountries: 39,
   },
   {
     id: 5,
-    name: 'south America',
-    numberOfCountries: 54,
+    route: 'south-america',
+    name: 'South America',
+    numberOfCountries: 14,
   },
   {
     id: 5,
-    name: 'australia-oceania',
-    numberOfCountries: 54,
+    route: 'australia-oceania',
+    name: 'Australia Oceania',
+    numberOfCountries: 19,
   },
 ];
 
@@ -42,9 +48,14 @@ function Home() {
       </h1>
       <ul>
         {continent.map((item) => (
-          <li key={item.name}>
-            <Link to={item.name}>
+          <li key={item.id}>
+            <Link to={item.route} exact="true">
               <h2>{item.name}</h2>
+              <p>
+                {item.numberOfCountries}
+                {' '}
+                Countries
+              </p>
             </Link>
           </li>
         ))}
