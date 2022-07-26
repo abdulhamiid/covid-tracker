@@ -33,7 +33,7 @@ const continent = [
     numberOfCountries: 14,
   },
   {
-    id: 5,
+    id: 6,
     route: 'australia-oceania',
     name: 'Australia Oceania',
     numberOfCountries: 19,
