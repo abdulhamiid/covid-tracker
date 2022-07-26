@@ -39,22 +39,3 @@ export const fetchData = (props) => async (dispatch) => {
 
   dispatch(fetchDataFromApi(newData));
 };
-
-export const fetchCountry = (props) => async (dispatch) => {
-  const response = await axios.get(url);
-  const data = response.data[props];
-  function display() {
-    const {
-      country, population, recovered, totalDeaths, cases, countryInfo,
-    } = data;
-    return {
-      country,
-      population,
-      recovered,
-      totalDeaths,
-      cases,
-      countryInfo,
-    };
-  }
-  dispatch(fetchDataFromApi(display()));
-};
