@@ -10,6 +10,7 @@ import Europe from './components/continents/Europe';
 import NorthAmerica from './components/continents/NorthAmerica';
 import SouthAmerica from './components/continents/SouthAmerica';
 import AustraliaOcenia from './components/continents/AustraliaOceania';
+import Cases from './components/views/Cases';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="cases" element={<Cases />} />
         <Route path="/africa" element={<Africa />} />
         <Route path="/asia" element={<Asia />} />
         <Route path="/europe" element={<Europe />} />
@@ -27,7 +29,6 @@ function App() {
         <Route path="*" element={<NotMatch />} />
       </Routes>
     </>
-
   );
 }
 
