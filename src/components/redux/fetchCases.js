@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 // Actions
-const FETCH_COUNTRY_CASE = 'FETCH_COUNTRY_CASE';
+const FETCH_CASE = 'FETCH_CASE';
 
-const countryData = [];
+const cases = [];
 // reducer
-export default function countryCasesReducer(state = countryData, action) {
+export default function countryCasesReducer(state = cases, action) {
   switch (action.type) {
-    case FETCH_COUNTRY_CASE: {
+    case FETCH_CASE: {
       return action.payload;
     }
 
@@ -17,8 +17,8 @@ export default function countryCasesReducer(state = countryData, action) {
 }
 
 // Action Creators
-const fetchCountryCase = (payload) => ({
-  type: FETCH_COUNTRY_CASE,
+const fetchCase = (payload) => ({
+  type: FETCH_CASE,
   payload,
 });
 
@@ -27,22 +27,23 @@ const fetchCountryCase = (payload) => ({
 // mission api
 const url = 'https://disease.sh/v3/covid-19/countries';
 
-export const fetchCountry = (props) => async (dispatch) => {
+export const fetchCountry = (continent, id) => async (dispatch) => {
   const response = await axios.get(url);
-  const data = response.data[props];
-  console.log(data);
+  const data = response.data.filter((item) => item.continent === continent);
+  const getCountryData = data[id];
   function display() {
     const {
-      country, population, recovered, totalDeaths, cases, countryInfo,
-    } = data;
+      country, continent, population, recovered, deaths, cases, countryInfo,
+    } = getCountryData;
     return {
       country,
+      continent,
       population,
       recovered,
-      totalDeaths,
+      deaths,
       cases,
-      countryInfo,
+      flagURL: countryInfo.flag,
     };
   }
-  dispatch(fetchCountryCase(display()));
+  dispatch(fetchCase(display()));
 };
