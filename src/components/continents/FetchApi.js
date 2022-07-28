@@ -2,18 +2,17 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../redux/api';
 import { fetchCountry } from '../redux/fetchCases';
 import Pagination from '../views/Pagination';
 import styles from './FetchApi.module.css';
 import Nav from '../views/Nav';
 
 function FetchApi({ continent }) {
-  const result = useSelector((state) => state.result);
+  const result = useSelector((state) => state.data);
+  const newData = result.filter((item) => item.continent === continent);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemPerPage] = useState(6);
   const dispatch = useDispatch();
-  dispatch(fetchData(continent));
 
   const handleClick = (e) => {
     const { id } = e.target;
@@ -22,7 +21,7 @@ function FetchApi({ continent }) {
 
   const indexOfLastItem = currentPage * itemPerPage;
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
-  const currentResult = result.slice(indexOfFirstItem, indexOfLastItem);
+  const currentResult = newData.slice(indexOfFirstItem, indexOfLastItem);
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -35,12 +34,12 @@ function FetchApi({ continent }) {
         <ul className={styles.wrapperUL}>
           {currentResult.map((item) => (
             <li key={item.country} className={styles.countryName}>
-              <Link to="/cases" id={result.indexOf(item)} onClick={handleClick} exact="true">{item.country}</Link>
+              <Link to="/cases" id={newData.indexOf(item)} onClick={handleClick} exact="true">{item.country}</Link>
             </li>
           ))}
         </ul>
       </div>
-      <Pagination itemPerPage={itemPerPage} totalItem={result.length} paginate={paginate} />
+      <Pagination itemPerPage={itemPerPage} totalItem={newData.length} paginate={paginate} />
     </div>
   );
 }
