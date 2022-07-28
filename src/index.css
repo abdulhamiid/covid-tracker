@@ -28,11 +28,27 @@ li {
 
 .navBar {
   position: fixed;
+  width: 100%;
   top: 0;
 }
 
 .navBar ul {
   display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.navBar > ul li,
+.navBar > ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.right-link {
+  gap: 20px;
 }
 
 a {
@@ -64,13 +80,13 @@ code {
 }
 
 .overlay {
-  background: rgb(209, 4, 93, 0.7);
+  background: rgb(209, 4, 93, 0.6);
   overflow: hidden;
   height: 100%;
  }
 
  .overlay:hover {
-  background: rgb(209, 4, 93, 0.8);
+  background: rgb(209, 4, 93, 0.3);
  }
  
 .dataPage {
