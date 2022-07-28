@@ -3,6 +3,11 @@
   height: 100%;
 }
 
+.homePage > div > p {
+  color: #f4f4f4;
+  letter-spacing: 4px;
+}
+
 .homePage > div {
   margin: 20px 0;
 }
