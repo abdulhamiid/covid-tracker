@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../redux/api';
 import { fetchCountry } from '../redux/fetchCases';
 import Pagination from '../views/Pagination';
+import styles from './FetchApi.module.css';
 
 function FetchApi({ continent }) {
   const result = useSelector((state) => state.result);
@@ -26,15 +27,17 @@ function FetchApi({ continent }) {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div>
-      <h1>{continent}</h1>
-      <ul>
-        {currentResult.map((item) => (
-          <li key={item.country}>
-            <Link to="/cases" id={result.indexOf(item)} onClick={handleClick} exact="true">{item.country}</Link>
-          </li>
-        ))}
-      </ul>
+    <div className={styles.wrapper}>
+      <div>
+        <h1>{continent}</h1>
+        <ul className={styles.wrapperUL}>
+          {currentResult.map((item) => (
+            <li key={item.country} className={`flex ${styles.countryName}`}>
+              <Link to="/cases" id={result.indexOf(item)} onClick={handleClick} exact="true">{item.country}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
       <Pagination itemPerPage={itemPerPage} totalItem={result.length} paginate={paginate} />
     </div>
   );
