@@ -3,6 +3,10 @@
   height: 100%;
 }
 
+.homePage > div {
+  margin: 20px 0;
+}
+
 .homeHeader {
   letter-spacing: 5px;
 }
