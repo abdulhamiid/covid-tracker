@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400');
 * {
   margin: 0;
   padding: 0;
@@ -6,20 +7,12 @@
 
 body {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: Montserrat,sans-serif;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(209, 4, 93, 0.9);
+
 }
 
 .flex {
@@ -38,13 +31,17 @@ li {
   top: 0;
 }
 
+.navBar ul {
+  display: flex;
+}
+
 a {
   color: #000;
   text-decoration: none;
 }
 
 .active {
-  color: orangered;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -62,7 +59,7 @@ code {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: 45%;
+  background-size: 90%;
   background-position: center center;
 }
 
