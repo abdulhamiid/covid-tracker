@@ -1,11 +1,29 @@
 .wrapper {
   height: 100vh;
-  width: 95%;
+  width: 100%;
   margin: auto;
   padding: 36px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
+}
+
+.wrapper > div > ul li {
+  background-color: rgba(250, 32, 126);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper > div > ul li a {
+  color: #fff;
+}
+
+
+.wrapper > div > ul li:nth-child(odd){
+  background-color: rgb(209, 4, 93, 0.9);
 }
 
 .contryName {
