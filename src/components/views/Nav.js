@@ -1,27 +1,24 @@
 import React from 'react';
+import { AiOutlineLeft } from 'react-icons/ai';
+import { IoMdSettings } from 'react-icons/io';
+import { RiMicFill } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom';
-
-const links = [
-  {
-    id: 1,
-    path: '/',
-    text: 'Home',
-  },
-  {
-    id: 2,
-    path: '/about',
-    text: 'About',
-  },
-];
 
 const Nav = () => (
   <nav className="navBar">
     <ul>
-      {links.map((link) => (
-        <li key={link.id}>
-          <NavLink to={link.path} exact="true">{link.text}</NavLink>
-        </li>
-      ))}
+      <li>
+        <NavLink to="/">
+          <AiOutlineLeft />
+          Home
+        </NavLink>
+      </li>
+      <li className="right-link">
+        <RiMicFill />
+        <NavLink to="/about">
+          <IoMdSettings />
+        </NavLink>
+      </li>
     </ul>
   </nav>
 );
