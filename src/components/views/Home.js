@@ -45,20 +45,22 @@ function Home() {
   return (
     <div className={styles.homePage}>
       <h1 className={styles.homeHeader}>
-        THE WORLD (COVID-19 data)
+        COVID-19
       </h1>
       <ul className={styles.continents}>
         {continent.map((item) => (
           <li key={item.id} className={styles.continent}>
             <div className={`box ${item.route}`}>
-              <Link to={item.route} exact="true" className="dataPage">
-                <h2>{item.name}</h2>
-                <p>
-                  {item.numberOfCountries}
-                  {' '}
-                  Countries
-                </p>
-              </Link>
+              <div className="overlay">
+                <Link to={item.route} exact="true" className="dataPage">
+                  <h2>{item.name}</h2>
+                  <p>
+                    {item.numberOfCountries}
+                    {' '}
+                    Countries
+                  </p>
+                </Link>
+              </div>
             </div>
           </li>
         ))}

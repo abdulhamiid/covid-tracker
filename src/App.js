@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './components/views/Home';
 import About from './components/views/About';
 import NotMatch from './components/views/NotMatch';
-import Nav from './components/views/Nav';
 import Africa from './components/continents/Africa';
 import Asia from './components/continents/Asia';
 import Europe from './components/continents/Europe';
@@ -15,7 +14,6 @@ import Cases from './components/views/Cases';
 function App() {
   return (
     <>
-      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
