@@ -149,6 +149,37 @@ code {
   height: 100%;
 }
 
+.statistics {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 50px auto 20px auto ;
+}
+
+.statistics img {
+  width: 56%;
+  margin: 20px auto;
+  height: 100px;
+}
+
+.statistics > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.statistics > div ul li {
+  padding: 10px;
+}
+
+.statistics > div ul li:nth-child(even) {
+  background-color: rgb(209, 4, 93, 0.9);
+}
+
 @media(min-width: 768px) {
   .navBar ul {
     padding: 30px;
