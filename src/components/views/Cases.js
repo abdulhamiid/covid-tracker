@@ -10,13 +10,8 @@ function Cases() {
   const {
     flagURL, country, continent, population, cases, recovered, deaths,
   } = result;
-  let route;
-
-  if (continent.indexOf(' ') >= 0) {
-    route = continent.replace(/\s/g, '-').toLowerCase();
-  } else {
-    route = continent.toLowerCase();
-  }
+  console.log(continent);
+  const route = continent.indexOf(' ') >= 0 ? continent.replace(/\s/g, '-').toLowerCase() : continent.toLowerCase();
   return (
     <>
       <nav className="navBar">
