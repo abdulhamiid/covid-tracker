@@ -1,5 +1,7 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { fetchLoadedData } from '../redux/loadApi';
 import styles from './Home.module.css';
 
 const continent = [
@@ -41,7 +43,16 @@ const continent = [
   },
 ];
 
+let isFetching = true;
+
 function Home() {
+  const dispatch = useDispatch();
+
+  if (isFetching === true) {
+    isFetching = false;
+    dispatch(fetchLoadedData());
+  }
+
   return (
     <div className={styles.homePage}>
       <h1 className={styles.homeHeader}>
