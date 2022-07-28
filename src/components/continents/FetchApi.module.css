@@ -11,7 +11,29 @@
 
 .wrapper > div > ul li {
   background-color: rgba(250, 32, 126);
+  color: #fff;
   height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 0 8px;
+}
+
+.wrapper > div > ul li > h4 {
+  text-align: left;
+}
+
+.wrapper > div > ul li > div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  gap: 0 15px;
+}
+
+.wrapper > div > ul li > div > a {
   display: flex;
   align-items: center;
   justify-content: center;
