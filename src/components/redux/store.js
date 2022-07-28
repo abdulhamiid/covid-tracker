@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import casesReducer from './api';
 import countryCasesReducer from './fetchCases';
+import loadDataReducer from './loadApi';
 
 const store = configureStore({
   reducer: {
-    result: casesReducer,
+    data: loadDataReducer,
     cases: countryCasesReducer,
   },
 });
