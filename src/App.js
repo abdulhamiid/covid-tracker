@@ -3,12 +3,12 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './components/views/Home';
 import About from './components/views/About';
 import NotMatch from './components/views/NotMatch';
-import Africa from './components/continents/Africa';
-import Asia from './components/continents/Asia';
-import Europe from './components/continents/Europe';
-import NorthAmerica from './components/continents/NorthAmerica';
-import SouthAmerica from './components/continents/SouthAmerica';
-import AustraliaOcenia from './components/continents/AustraliaOceania';
+import Africa from './components/routes/Africa';
+import Asia from './components/routes/Asia';
+import Europe from './components/routes/Europe';
+import NorthAmerica from './components/routes/NorthAmerica';
+import SouthAmerica from './components/routes/SouthAmerica';
+import AustraliaOcenia from './components/routes/AustraliaOceania';
 import Cases from './components/views/Cases';
 
 function App() {
