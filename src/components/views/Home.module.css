@@ -9,16 +9,18 @@
 .continents {
   margin: 30px 0;
   display: grid;
-  gap: 2px;
-  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  grid-template-columns: repeat(2, 1fr);
 }
 .continent {
   list-style: none;
-  height: 250px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
-
-
+.continent a {
+  color: #fff;
+}
