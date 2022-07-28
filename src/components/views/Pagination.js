@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Pagination.module.css';
 
 const Pagination = ({ itemPerPage, totalItem, paginate }) => {
   const pageNumbers = [];
@@ -8,15 +10,21 @@ const Pagination = ({ itemPerPage, totalItem, paginate }) => {
   }
   return (
     <nav>
-      <ul>
+      <ul className={`flex ${styles.footer}`}>
         {pageNumbers.map((number) => (
           <li key={number}>
-            <a onClick={() => paginate(number)} href="#">{number}</a>
+            <button type="button" onClick={() => paginate(number)} href="#" className={`flex ${styles.paginateBtn}`}>{number}</button>
           </li>
         ))}
       </ul>
     </nav>
   );
+};
+
+Pagination.propTypes = {
+  itemPerPage: PropTypes.number.isRequired,
+  totalItem: PropTypes.number.isRequired,
+  paginate: PropTypes.func.isRequired,
 };
 
 export default Pagination;
