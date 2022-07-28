@@ -56,7 +56,11 @@ function Home() {
   return (
     <div className={styles.homePage}>
       <div>
-        <h1 className={styles.homeHeader}>The World COVID-19</h1>
+        <h1 className={styles.homeHeader}>
+          The World
+          <br />
+          COVID-19
+        </h1>
         <p>Statistics</p>
       </div>
       <ul className={styles.continents}>
