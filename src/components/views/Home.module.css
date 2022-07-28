@@ -27,9 +27,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
 }
 
 .continent a {
   color: #fff;
+}
+
+
+@media(min-width: 768px) {
+  .continents {
+    gap: 2px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+
+  .continent {
+    height: 350px;
+  }
+
+  .continent:nth-child(5) {
+    grid-column: 2/3;
+  }
+
 }

@@ -17,7 +17,7 @@ function FetchApi({ continent }) {
 
   const handleClick = (e) => {
     const { id } = e.target;
-    console.log(id)
+    console.log(e.target);
     dispatch(fetchCountry(continent, id));
   };
 

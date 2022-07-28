@@ -63,3 +63,38 @@
 .contryName:nth-child(odd) {
   background: rgba(173, 5, 78, 0.7);
 }
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 80px 0;
+    padding-bottom: 20px;
+  }
+
+  .wrapper > div > ul li {
+    background-color: rgba(250, 32, 126);
+    height: 65px;
+    gap: 15px;
+    padding: 0 70px;
+  } 
+
+  .wrapper > div > ul li h4 {
+    font-size: 20px;
+  }
+
+  .wrapper > div > ul li p {
+    font-size: 17px;
+  }
+
+  .wrapper > div > ul li > div {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    gap: 0 35px;
+  }
+
+  .wrapper > div > ul li > div svg {
+    font-size: 22px;
+  }
+}
