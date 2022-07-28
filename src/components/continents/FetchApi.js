@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiArrowRightCircle } from 'react-icons/fi';
+// import { BsArrowRightCircle } from 'react-icons/bs';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -40,7 +40,8 @@ function FetchApi({ continent }) {
               <div>
                 <p>{`${item.cases} cases`}</p>
                 <Link to="/cases" id={newData.indexOf(item)} onClick={handleClick} exact="true">
-                  <FiArrowRightCircle />
+                  {/* <BsArrowRightCircle /> */}
+                  xyz
                 </Link>
               </div>
             </li>

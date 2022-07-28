@@ -70,6 +70,11 @@
     padding-bottom: 20px;
   }
 
+  .wrapper > div > ul {
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 0 60px 0 rgb(0 0 0 / 9%);
+  }
   .wrapper > div > ul li {
     background-color: rgba(250, 32, 126);
     height: 65px;
