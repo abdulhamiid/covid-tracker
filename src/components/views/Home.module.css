@@ -1,0 +1,24 @@
+.homePage {
+  text-align: center;
+  height: 100%;
+}
+
+.homeHeader {
+  letter-spacing: 5px;
+}
+.continents {
+  margin: 30px 0;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.continent {
+  list-style: none;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './Home.module.css';
 
 const continent = [
   {
@@ -42,21 +43,23 @@ const continent = [
 
 function Home() {
   return (
-    <div>
-      <h1>
-        Countries all over the world
+    <div className={styles.homePage}>
+      <h1 className={styles.homeHeader}>
+        THE WORLD (COVID-19 data)
       </h1>
-      <ul>
+      <ul className={styles.continents}>
         {continent.map((item) => (
-          <li key={item.id}>
-            <Link to={item.route} exact="true">
-              <h2>{item.name}</h2>
-              <p>
-                {item.numberOfCountries}
-                {' '}
-                Countries
-              </p>
-            </Link>
+          <li key={item.id} className={styles.continent}>
+            <div className={`box ${item.route}`}>
+              <Link to={item.route} exact="true" className="dataPage">
+                <h2>{item.name}</h2>
+                <p>
+                  {item.numberOfCountries}
+                  {' '}
+                  Countries
+                </p>
+              </Link>
+            </div>
           </li>
         ))}
       </ul>
