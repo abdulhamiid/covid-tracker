@@ -6,6 +6,7 @@ import { fetchData } from '../redux/api';
 import { fetchCountry } from '../redux/fetchCases';
 import Pagination from '../views/Pagination';
 import styles from './FetchApi.module.css';
+import Nav from '../views/Nav';
 
 function FetchApi({ continent }) {
   const result = useSelector((state) => state.result);
@@ -28,11 +29,12 @@ function FetchApi({ continent }) {
 
   return (
     <div className={styles.wrapper}>
+      <Nav />
       <div>
         <h1>{continent}</h1>
         <ul className={styles.wrapperUL}>
           {currentResult.map((item) => (
-            <li key={item.country} className={`flex ${styles.countryName}`}>
+            <li key={item.country} className={styles.countryName}>
               <Link to="/cases" id={result.indexOf(item)} onClick={handleClick} exact="true">{item.country}</Link>
             </li>
           ))}
