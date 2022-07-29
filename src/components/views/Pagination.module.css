@@ -2,7 +2,7 @@
 .paginateBtn {
   width: 80%;
   margin: auto;
-  gap: 4px
+  gap: 4px;
 }
 
 .footer li {
@@ -17,5 +17,5 @@
 }
 
 .paginateBtn:hover {
-  cursor: pointer
+  cursor: pointer;
 }

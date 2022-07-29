@@ -34,17 +34,21 @@
   padding-left: 8px;
   font-size: 15px;
 }
+
 .wrapper > div > ul li > h4 {
   text-align: left;
 }
 
 .wrapper > div > ul li > div {
   display: flex;
-  height: 100%;
   align-items: center;
   justify-content: space-between;
   height: auto;
   gap: 0 15px;
+}
+
+.wrapper > div > ul li a {
+  color: #fff;
 }
 
 .wrapper > div > ul li > div > a {
@@ -53,11 +57,7 @@
   justify-content: center;
 }
 
-.wrapper > div > ul li a {
-  color: #fff;
-}
-
-.wrapper > div > ul li:nth-child(odd){
+.wrapper > div > ul li:nth-child(odd) {
   background-color: rgb(209, 4, 93, 0.9);
 }
 
@@ -95,7 +95,7 @@
     height: 65px;
     gap: 15px;
     padding: 0 70px;
-  } 
+  }
 
   .wrapper > div > ul li h4 {
     font-size: 20px;
@@ -107,7 +107,6 @@
 
   .wrapper > div > ul li > div {
     display: flex;
-    height: 100%;
     align-items: center;
     justify-content: space-between;
     height: auto;
