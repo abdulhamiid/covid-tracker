@@ -1,16 +1,17 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { IoMdSettings } from 'react-icons/io';
 import { RiMicFill } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 function Cases() {
+  setTimeout(() => <h1>Loading</h1>, 10000);
   const result = useSelector((state) => state.cases);
   const {
     flagURL, country, continent, population, cases, recovered, deaths,
   } = result;
-  const route = continent.indexOf(' ') >= 0 ? continent.replace(/\s/g, '-').toLowerCase() : continent.toLowerCase();
+  const route = continent.toLowerCase();
   return (
     <>
       <nav className="navBar">
