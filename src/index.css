@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(209, 4, 93, 0.9);
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.navBar svg {
+  font-size: 18px;
+}
+
+svg:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.aboutPage a {
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style: none;
+}
+
+.navBar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.navBar ul {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.navBar > ul li,
+.navBar > ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.right-link {
+  gap: 20px;
+}
+
+.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center center;
+}
+
+.overlay {
+  background: rgb(209, 4, 93, 0.6);
+  overflow: hidden;
+  height: 100%;
+}
+
+.overlay:hover {
+  background: rgb(209, 4, 93, 0.3);
+}
+
+.dataPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.africa {
+  background-image: url(../src/components/img/africa.png);
+}
+
+.asia {
+  background-image: url(../src/components/img/asia.png);
+}
+
+.europe {
+  background-image: url(../src/components/img/europe.png);
+}
+
+.north-america {
+  background-image: url(../src/components/img/northAmerica.png);
+}
+
+.south-america {
+  background-image: url(../src/components/img/southAmerica.png);
+}
+
+.australia-oceania {
+  background-image: url(../src/components/img/australia.png);
+}
+
+.bgLight {
+  background-color: rgb(255, 68, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.statistics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 50px auto 20px auto;
+}
+
+.statistics img {
+  width: 56%;
+  margin: 20px auto;
+  height: 100px;
+}
+
+.statistics > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.statistics > div ul li {
+  padding: 10px;
+}
+
+.statistics > div ul li:nth-child(even) {
+  background-color: rgb(209, 4, 93, 0.9);
+}
+
+.arrow {
+  width: 28px;
+  height: 19px;
+  transform: rotate(-90deg);
+}
+
+@media (min-width: 768px) {
+  .navBar ul {
+    padding: 30px;
+  }
+
+  .right-link {
+    gap: 40px;
+  }
+
+  .navBar svg {
+    font-size: 30px;
+  }
+
+  .statistics img {
+    width: 20%;
+    height: 150px;
+  }
+
+  .statistics > div {
+    width: 50%;
+    margin: 30px auto;
+  }
+}

@@ -1,0 +1,52 @@
+.homePage {
+  text-align: center;
+  height: 100%;
+}
+
+.homePage > div > p {
+  color: #fff;
+  letter-spacing: 4px;
+}
+
+.homePage > div {
+  margin: 20px 0;
+}
+
+.homeHeader {
+  letter-spacing: 5px;
+}
+
+.continents {
+  margin: 30px 0;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.continent {
+  list-style: none;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.continent a {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .continents {
+    gap: 2px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+
+  .continent {
+    height: 350px;
+  }
+
+  .continent:nth-child(5) {
+    grid-column: 2/3;
+  }
+}

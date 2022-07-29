@@ -1,0 +1,21 @@
+.footer,
+.paginateBtn {
+  width: 80%;
+  margin: auto;
+  gap: 4px;
+}
+
+.footer li {
+  list-style: none;
+}
+
+.paginateBtn {
+  width: 25px;
+  padding: 9px 15px;
+  color: #fff;
+  background-color: rgb(209, 4, 93, 0.9);
+}
+
+.paginateBtn:hover {
+  cursor: pointer;
+}
