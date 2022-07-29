@@ -13,7 +13,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live Demo
 
-[Covid-19 World Statistics](https://relaxed-travesseiro-673333.netlify.app)
+[Covid-19 World Statistics](https://react-capstone-hamid.herokuapp.com/)
 
 
 ### Clone this repository
