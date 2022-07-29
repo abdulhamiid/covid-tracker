@@ -6,7 +6,6 @@ import { RiMicFill } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom';
 
 function Cases() {
-  setTimeout(() => <h1>Loading</h1>, 10000);
   const result = useSelector((state) => state.cases);
   const {
     flagURL, country, continent, population, cases, recovered, deaths,
