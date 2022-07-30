@@ -63,6 +63,7 @@ li {
   display: flex;
   width: 100%;
   padding: 10px;
+  padding-bottom: 0;
   justify-content: space-between;
 }
 
@@ -99,16 +100,6 @@ code {
   background-repeat: no-repeat;
   background-size: 90%;
   background-position: center center;
-}
-
-.overlay {
-  background: rgb(209, 4, 93, 0.6);
-  overflow: hidden;
-  height: 100%;
-}
-
-.overlay:hover {
-  background: rgb(209, 4, 93, 0.3);
 }
 
 .dataPage {
@@ -181,7 +172,41 @@ code {
   background-color: rgb(209, 4, 93, 0.9);
 }
 
+.overlay {
+  overflow: hidden;
+  height: 100%;
+}
+
+.dark {
+  background: rgba(92, 3, 42, 0.3);
+}
+
+.light {
+  background: rgba(92, 3, 42, 0.1);
+}
+
+.searchContainer input {
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+
+.searchContainer input:focus {
+  outline: none;
+}
+
 @media (min-width: 768px) {
+  .searchContainer input {
+    padding: 10px;
+    margin-top: 10px;
+    width: 40%;
+    font-size: 17px;
+    border: none;
+    border-radius: 4px;
+  }
+
   .navBar ul {
     padding: 30px;
   }
