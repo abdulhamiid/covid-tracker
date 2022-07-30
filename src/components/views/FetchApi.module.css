@@ -1,0 +1,120 @@
+.wrapper {
+  height: auto;
+  width: 100%;
+  margin: auto;
+  padding: 36px 0;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.wrapper h1 {
+  margin-bottom: 10px;
+}
+
+.wrapper > div > ul li,
+.wrapper > div > div {
+  background-color: rgba(250, 32, 126);
+  color: #fff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 0 8px;
+}
+
+.wrapper > div > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+  gap: 40px;
+  padding-left: 8px;
+  font-size: 15px;
+}
+
+.wrapper > div > ul li > h4 {
+  text-align: left;
+}
+
+.wrapper > div > ul li > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  gap: 0 15px;
+}
+
+.wrapper > div > ul li a {
+  color: #fff;
+}
+
+.wrapper > div > ul li > div > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper > div > ul li:nth-child(odd) {
+  background-color: rgb(209, 4, 93, 0.9);
+}
+
+.contryName {
+  width: 100%;
+  height: 80px;
+  background: rgb(209, 4, 93, 0.7);
+  color: #fff;
+}
+
+.contryName:nth-child(odd) {
+  background: rgba(173, 5, 78, 0.7);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 60px 0;
+    padding-bottom: 20px;
+  }
+
+  .wrapper > div > ul,
+  .wrapper > div > div {
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 0 60px 0 rgb(0 0 0 / 9%);
+  }
+
+  .wrapper > div > div {
+    padding-left: 70px;
+    gap: 60px;
+  }
+
+  .wrapper > div > ul li {
+    background-color: rgba(250, 32, 126);
+    height: 65px;
+    gap: 15px;
+    padding: 0 70px;
+  }
+
+  .wrapper > div > ul li h4 {
+    font-size: 20px;
+  }
+
+  .wrapper > div > ul li p {
+    font-size: 17px;
+  }
+
+  .wrapper > div > ul li > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    gap: 0 35px;
+  }
+
+  .wrapper > div > ul li > div svg {
+    font-size: 22px;
+  }
+}
