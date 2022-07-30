@@ -22,7 +22,6 @@ function FetchApi({ continent }) {
     item.country.toLowerCase().includes(query.toLowerCase())
   ));
 
-
   const [currentPage, setCurrentPage] = useState(1);
   const [itemPerPage] = useState(5);
 
@@ -34,7 +33,6 @@ function FetchApi({ continent }) {
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  
   return (
     <div className={styles.wrapper}>
       <Nav />
