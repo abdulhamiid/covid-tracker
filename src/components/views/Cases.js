@@ -18,7 +18,7 @@ const Cases = () => {
       <nav className="navBar">
         <ul>
           <li>
-            <NavLink to={`/continent/${continent}`}>
+            <NavLink to={`/continent/${continent.toLowerCase()}`}>
               <AiOutlineLeft />
             </NavLink>
           </li>

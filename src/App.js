@@ -4,7 +4,7 @@ import Home from './components/views/Home';
 import About from './components/views/About';
 import NotMatch from './components/views/NotMatch';
 import Cases from './components/views/Cases';
-import SingleContinent from './components/routes/SingleContinent';
+import SingleContinent from './components/views/SingleContinent';
 
 function App() {
   return (

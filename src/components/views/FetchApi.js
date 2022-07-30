@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Pagination from '../views/Pagination';
+import Pagination from './Pagination';
 import styles from './FetchApi.module.css';
-import Nav from '../views/Nav';
+import Nav from './Nav';
 import arrow from '../img/arrow.png';
 
 function FetchApi({ continent }) {
