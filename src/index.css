@@ -63,8 +63,8 @@ li {
   display: flex;
   width: 100%;
   padding: 10px;
-  padding-bottom: 0;
   justify-content: space-between;
+  padding-bottom: 0;
 }
 
 .navBar > ul li,
@@ -209,6 +209,7 @@ code {
 
   .navBar ul {
     padding: 30px;
+    padding-bottom: 0;
   }
 
   .right-link {
@@ -236,8 +237,4 @@ code {
   .light {
     background: rgba(92, 3, 42, 0);
   }
-
-  /* .dataPage:nth-child(odd) {
-    background:rgba(92, 3, 42, 0.3);
-  } */
 }
