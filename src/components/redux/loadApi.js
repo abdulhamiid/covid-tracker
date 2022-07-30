@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Actions
-const LOAD_DATA = 'LOAD_DATA';
+export const LOAD_DATA = 'LOAD_DATA';
 
 const data = [];
 // reducer
@@ -17,7 +17,7 @@ export default function loadDataReducer(state = data, action) {
 }
 
 // Action Creators
-const fetchAction = (payload) => ({
+export const fetchAction = (payload) => ({
   type: LOAD_DATA,
   payload,
 });

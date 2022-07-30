@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { BsArrowRightCircle } from 'react-icons/bs';
 import Pagination from './Pagination';
 import styles from './FetchApi.module.css';
 import Nav from './Nav';
-import arrow from '../img/arrow.png';
 
 function FetchApi({ continent }) {
   const result = useSelector((state) => state.data);
@@ -36,7 +36,7 @@ function FetchApi({ continent }) {
               <div>
                 <p>{`${item.cases.toLocaleString()} cases`}</p>
                 <Link to={`/cases/${item.country}`} id={newData.indexOf(item)} exact="true">
-                  <img src={arrow} alt="arrow" className="arrow" />
+                  <BsArrowRightCircle />
                 </Link>
               </div>
             </li>
