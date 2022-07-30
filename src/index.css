@@ -65,6 +65,7 @@ li {
   padding: 10px;
   padding-bottom: 0;
   justify-content: space-between;
+  padding-bottom: 0;
 }
 
 .navBar > ul li,
@@ -209,6 +210,7 @@ code {
 
   .navBar ul {
     padding: 30px;
+    padding-bottom: 0;
   }
 
   .right-link {
