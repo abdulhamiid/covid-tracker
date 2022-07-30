@@ -40,6 +40,10 @@
     justify-content: center;
   }
 
+  .continents li:nth-child(odd) {
+    background: rgba(92, 3, 42, 0.3);
+  }
+
   .continent {
     height: 350px;
   }
