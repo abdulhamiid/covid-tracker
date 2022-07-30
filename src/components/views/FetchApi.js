@@ -11,7 +11,7 @@ function FetchApi({ continent }) {
   const result = useSelector((state) => state.data);
   const newData = result.filter((item) => item.continent === continent);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemPerPage] = useState(6);
+  const [itemPerPage] = useState(5);
 
   const indexOfLastItem = currentPage * itemPerPage;
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
