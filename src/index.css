@@ -228,4 +228,16 @@ code {
     width: 50%;
     margin: 30px auto;
   }
+  
+  .dark {
+    background: rgba(92, 3, 42, 0);
+  }
+  
+  .light {
+    background: rgba(92, 3, 42, 0);
+  }
+
+  /* .dataPage:nth-child(odd) {
+    background:rgba(92, 3, 42, 0.3);
+  } */
 }
