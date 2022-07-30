@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchCountry } from '../redux/fetchCases';
+import { useSelector } from 'react-redux';
 import Pagination from '../views/Pagination';
 import styles from './FetchApi.module.css';
 import Nav from '../views/Nav';
@@ -13,12 +12,6 @@ function FetchApi({ continent }) {
   const newData = result.filter((item) => item.continent === continent);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemPerPage] = useState(6);
-  const dispatch = useDispatch();
-
-  const handleClick = (e) => {
-    const { id } = e.target.parentElement;
-    dispatch(fetchCountry(continent, id));
-  };
 
   const indexOfLastItem = currentPage * itemPerPage;
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
@@ -41,8 +34,8 @@ function FetchApi({ continent }) {
             <li key={item.country} className={styles.countryName}>
               <h4>{item.country}</h4>
               <div>
-                <p>{`${item.cases} cases`}</p>
-                <Link to="/cases" id={newData.indexOf(item)} onClick={handleClick} exact="true">
+                <p>{`${item.cases.toLocaleString()} cases`}</p>
+                <Link to={`/cases/${item.country}`} id={newData.indexOf(item)} exact="true">
                   <img src={arrow} alt="arrow" className="arrow" />
                 </Link>
               </div>
