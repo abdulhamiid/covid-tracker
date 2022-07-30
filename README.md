@@ -15,11 +15,21 @@ To get a local copy up and running follow these simple example steps.
 
 [Covid-19 World Statistics](https://react-capstone-hamid.herokuapp.com/)
 
+[Loom Video Link](https://www.loom.com/share/b2dcada22a54415f9082a78937da754b?from_recorder=1&focus_title=1)
+
 
 ### Clone this repository
 
 ```
 https://github.com/abdulhamiid/covid-19.git
+```
+To clone the repo run:
+```
+  git clone https://github.com/abdulhamiid/covid-19.git  
+```
+To access the cloned directory, run:
+```
+cd covid-19
 ```
 
 ## Basic Setup
