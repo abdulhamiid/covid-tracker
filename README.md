@@ -1,6 +1,6 @@
 # covid-19
 
-> This project is a web application for showing world statistics about the corona virus pandemic, fetching the data from an API.
+> This project is a web application the corona virus pandemic showing the world statistics, fetching the data from an API.
 
 
 ## Built With
