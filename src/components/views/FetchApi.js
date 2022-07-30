@@ -6,23 +6,39 @@ import { BsArrowRightCircle } from 'react-icons/bs';
 import Pagination from './Pagination';
 import styles from './FetchApi.module.css';
 import Nav from './Nav';
+import Search from './Search';
 
 function FetchApi({ continent }) {
+  const [query, setQuery] = useState('');
+
+  const onSearch = (event) => {
+    setQuery(event.target.value);
+  };
+
   const result = useSelector((state) => state.data);
   const newData = result.filter((item) => item.continent === continent);
+
+  const filteredResult = newData.filter((item) => (
+    item.country.toLowerCase().includes(query.toLowerCase())
+  ));
+
+
   const [currentPage, setCurrentPage] = useState(1);
   const [itemPerPage] = useState(5);
 
+  // pagination
   const indexOfLastItem = currentPage * itemPerPage;
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
-  const currentResult = newData.slice(indexOfFirstItem, indexOfLastItem);
+  const currentResult = filteredResult.slice(indexOfFirstItem, indexOfLastItem);
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  
   return (
     <div className={styles.wrapper}>
       <Nav />
+      <Search query={query} onSearch={onSearch} />
       <div>
         <h1>{continent}</h1>
         <div>

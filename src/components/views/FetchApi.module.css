@@ -1,11 +1,12 @@
 .wrapper {
-  height: 100vh;
+  height: auto;
   width: 100%;
   margin: auto;
   padding: 36px 0;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   justify-content: space-between;
   text-align: center;
 }
