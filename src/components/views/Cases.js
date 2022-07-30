@@ -1,9 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink, useParams } from 'react-router-dom';
-import { AiOutlineLeft } from 'react-icons/ai';
-import { RiMicFill } from 'react-icons/ri';
-import { IoMdSettings } from 'react-icons/io';
+import { useParams } from 'react-router-dom';
+import Nav from './Nav';
 
 const Cases = () => {
   const { countryId } = useParams();
@@ -15,21 +13,7 @@ const Cases = () => {
 
   return (
     <>
-      <nav className="navBar">
-        <ul>
-          <li>
-            <NavLink to={`/continent/${continent.toLowerCase()}`}>
-              <AiOutlineLeft />
-            </NavLink>
-          </li>
-          <li className="right-link">
-            <RiMicFill />
-            <NavLink to="/about">
-              <IoMdSettings />
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
+      <Nav />
       <div className="statistics">
         <img src={flag} alt="flag" />
         <h1>{country}</h1>

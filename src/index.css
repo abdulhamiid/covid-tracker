@@ -181,12 +181,6 @@ code {
   background-color: rgb(209, 4, 93, 0.9);
 }
 
-.arrow {
-  width: 28px;
-  height: 19px;
-  transform: rotate(-90deg);
-}
-
 @media (min-width: 768px) {
   .navBar ul {
     padding: 30px;
