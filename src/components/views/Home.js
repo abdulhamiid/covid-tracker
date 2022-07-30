@@ -68,7 +68,7 @@ function Home() {
           <li key={item.id} className={styles.continent}>
             <div className={`box ${item.route}`}>
               <div className="overlay">
-                <Link to={item.route} exact="true" className="dataPage">
+                <Link to={`/continent/${item.route}`} exact="true" className="dataPage">
                   <h2>{item.name}</h2>
                   <p>{`${item.numberOfCountries} Countries`}</p>
                 </Link>
