@@ -12,7 +12,13 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(209, 4, 93, 0.9);
+  background-color: #fd5294;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  margin-top: 25px;
 }
 
 a {
@@ -56,13 +62,14 @@ li {
 .navBar {
   position: fixed;
   width: 100%;
+  background-color: #e84a88;
+  padding: 15px;
   top: 0;
 }
 
 .navBar ul {
   display: flex;
   width: 100%;
-  padding: 10px;
   justify-content: space-between;
   padding-bottom: 0;
 }
@@ -169,7 +176,7 @@ code {
 }
 
 .statistics > div ul li:nth-child(even) {
-  background-color: rgb(209, 4, 93, 0.9);
+  background-color: #cf4278;
 }
 
 .overlay {
@@ -178,19 +185,19 @@ code {
 }
 
 .dark {
-  background: rgba(92, 3, 42, 0.3);
+  background: rgba(219, 70, 129, 0.8);
 }
 
 .light {
-  background: rgba(92, 3, 42, 0.1);
+  background: rgba(207, 66, 120, 0.3);
 }
 
 .searchContainer input {
-  padding: 10px;
+  padding: 10px 20px;
   border: none;
   font-size: 16px;
   margin-top: 15px;
-  border-radius: 4px;
+  border-radius: 60px;
 }
 
 .searchContainer input:focus {
@@ -199,16 +206,21 @@ code {
 
 @media (min-width: 768px) {
   .searchContainer input {
-    padding: 10px;
     margin-top: 10px;
     width: 40%;
     font-size: 17px;
     border: none;
-    border-radius: 4px;
+  }
+
+  #root {
+    margin-top: 40px;
+  }
+
+  .navBar {
+    padding: 30px;
   }
 
   .navBar ul {
-    padding: 30px;
     padding-bottom: 0;
   }
 
