@@ -185,11 +185,11 @@ code {
 }
 
 .dark {
-  background: rgba(219,70,129, 0.8);
+  background: rgba(219, 70, 129, 0.8);
 }
 
 .light {
-  background: rgba(207,66,120, 0.3);
+  background: rgba(207, 66, 120, 0.3);
 }
 
 .searchContainer input {
@@ -219,6 +219,7 @@ code {
   .navBar {
     padding: 30px;
   }
+
   .navBar ul {
     padding-bottom: 0;
   }
