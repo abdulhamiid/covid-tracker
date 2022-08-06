@@ -63,14 +63,13 @@ li {
   position: fixed;
   width: 100%;
   background-color: #e84a88;
-  padding: 10px;
+  padding: 15px;
   top: 0;
 }
 
 .navBar ul {
   display: flex;
   width: 100%;
-  padding: 10px;
   justify-content: space-between;
   padding-bottom: 0;
 }
@@ -213,8 +212,14 @@ code {
     border: none;
   }
 
-  .navBar ul {
+  #root {
+    margin-top: 40px;
+  }
+
+  .navBar {
     padding: 30px;
+  }
+  .navBar ul {
     padding-bottom: 0;
   }
 
