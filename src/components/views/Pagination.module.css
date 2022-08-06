@@ -10,10 +10,14 @@
 }
 
 .paginateBtn {
-  width: 25px;
-  padding: 9px 15px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #fff;
   color: #fff;
-  background-color: rgb(209, 4, 93, 0.9);
+  background-color: #cf4278;
 }
 
 .paginateBtn:hover {

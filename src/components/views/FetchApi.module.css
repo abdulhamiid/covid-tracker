@@ -17,7 +17,7 @@
 
 .wrapper > div > ul li,
 .wrapper > div > div {
-  background-color: rgba(250, 32, 126);
+  background-color: #e84a88;
   color: #fff;
   height: 60px;
   display: flex;
@@ -59,7 +59,7 @@
 }
 
 .wrapper > div > ul li:nth-child(odd) {
-  background-color: rgb(209, 4, 93, 0.9);
+  background-color: #cf4278;
 }
 
 .contryName {
@@ -92,7 +92,7 @@
   }
 
   .wrapper > div > ul li {
-    background-color: rgba(250, 32, 126);
+    background-color: #e84a88;
     height: 65px;
     gap: 15px;
     padding: 0 70px;

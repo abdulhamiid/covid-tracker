@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(209, 4, 93, 0.9);
+  background-color: #fd5294;
 }
 
 a {
@@ -169,7 +169,7 @@ code {
 }
 
 .statistics > div ul li:nth-child(even) {
-  background-color: rgb(209, 4, 93, 0.9);
+  background-color: #cf4278;
 }
 
 .overlay {
@@ -178,19 +178,19 @@ code {
 }
 
 .dark {
-  background: rgba(92, 3, 42, 0.3);
+  background: rgba(219,70,129, 0.8);
 }
 
 .light {
-  background: rgba(92, 3, 42, 0.1);
+  background: rgba(207,66,120, 0.3);
 }
 
 .searchContainer input {
-  padding: 10px;
+  padding: 10px 20px;
   border: none;
   font-size: 16px;
   margin-top: 15px;
-  border-radius: 4px;
+  border-radius: 60px;
 }
 
 .searchContainer input:focus {
@@ -199,12 +199,10 @@ code {
 
 @media (min-width: 768px) {
   .searchContainer input {
-    padding: 10px;
     margin-top: 10px;
     width: 40%;
     font-size: 17px;
     border: none;
-    border-radius: 4px;
   }
 
   .navBar ul {
