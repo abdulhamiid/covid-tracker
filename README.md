@@ -13,9 +13,9 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live Demo
 
-[Covid-19 World Statistics](https://react-capstone-hamid.herokuapp.com/)
+[Live demo](https://react-capstone-hamid.herokuapp.com/)
 
-[Loom Video Link](https://www.loom.com/share/b2dcada22a54415f9082a78937da754b?from_recorder=1&focus_title=1)
+Loom video- [watch](https://www.loom.com/share/b2dcada22a54415f9082a78937da754b?from_recorder=1&focus_title=1)
 
 ## Screenshots
 ![screenshot](./src/components/img/desktop1.PNG)
@@ -31,7 +31,7 @@ https://github.com/abdulhamiid/covid-19.git
 ```
 To clone the repo run:
 ```
-  git clone https://github.com/abdulhamiid/covid-19.git  
+git clone https://github.com/abdulhamiid/covid-19.git  
 ```
 To access the cloned directory, run:
 ```
@@ -53,9 +53,9 @@ Run ```npm start```
 
 👤 **Abdulhamid**
 
-- GitHub: [@githubhandle](https://github.com/abdulhamiid)
-- Twitter: [@twitterhandle](https://twitter.com/abdulhamid_adio)
-- LinkedIn: [LinkedIn](https://linkedin.com/)
+- GitHub: [abdulhamiid](https://github.com/abdulhamiid)
+- Twitter: [@abdulhamid_adio](https://twitter.com/abdulhamid_adio)
+- LinkedIn: [Adio Abdulhamid](https://linkedin.com/)
 
 ## 🤝 Contributing
 
