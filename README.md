@@ -13,7 +13,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live Demo
 
-[Live demo](https://react-capstone-hamid.herokuapp.com/)
+[Live demo](https://vcovid-19-tracker.netlify.app/)
 
 Loom video- [watch](https://www.loom.com/share/b2dcada22a54415f9082a78937da754b?from_recorder=1&focus_title=1)
 
