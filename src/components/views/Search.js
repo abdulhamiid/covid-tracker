@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './Search.css';
 
 function Search(props) {
   const { query, onSearch } = props;
 
   return (
-    <div className="searchContainer">
+    <div className="searchContainer hide">
       <input
         type="text"
         placeholder="search country"

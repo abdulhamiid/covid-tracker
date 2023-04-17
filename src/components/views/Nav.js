@@ -1,10 +1,12 @@
 import React from 'react';
 import { AiOutlineLeft } from 'react-icons/ai';
-import { IoMdSettings } from 'react-icons/io';
-import { RiMicFill } from 'react-icons/ri';
+import { IoIosSearch } from 'react-icons/io';
+
+import { MdMic } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
 const Nav = () => (
+
   <nav className="navBar">
     <ul>
       <li>
@@ -14,10 +16,16 @@ const Nav = () => (
         </NavLink>
       </li>
       <li className="right-link">
-        <RiMicFill />
+        <MdMic />
+
         <NavLink to="/about">
-          <IoMdSettings />
+          {/* <IoMdSettings /> */}
         </NavLink>
+      </li>
+      <li>
+        <button type="button" onClick={() => { document.querySelector('.searchContainer').classList.toggle('hide'); }}>
+          <IoIosSearch />
+        </button>
       </li>
     </ul>
   </nav>

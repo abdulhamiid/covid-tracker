@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { BsArrowRightCircle } from 'react-icons/bs';
-import Pagination from './Pagination';
 import styles from './FetchApi.module.css';
 import Nav from './Nav';
 import Search from './Search';
@@ -22,16 +21,16 @@ function FetchApi({ continent }) {
     item.country.toLowerCase().includes(query.toLowerCase())
   ));
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemPerPage] = useState(5);
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const [itemPerPage] = useState(5);
 
   // pagination
-  const indexOfLastItem = currentPage * itemPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemPerPage;
-  const currentResult = filteredResult.slice(indexOfFirstItem, indexOfLastItem);
+  // const indexOfLastItem = currentPage * itemPerPage;
+  // const indexOfFirstItem = indexOfLastItem - itemPerPage;
+  // const currentResult = filteredResult.slice(indexOfFirstItem, indexOfLastItem);
 
   // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className={styles.wrapper}>
@@ -44,7 +43,7 @@ function FetchApi({ continent }) {
           <h3>Covid-19 Stat</h3>
         </div>
         <ul className={styles.wrapperUL}>
-          {currentResult.map((item) => (
+          {filteredResult.map((item) => (
             <li key={item.country} className={styles.countryName}>
               <h4>{item.country}</h4>
               <div>
@@ -57,7 +56,7 @@ function FetchApi({ continent }) {
           ))}
         </ul>
       </div>
-      <Pagination itemPerPage={itemPerPage} totalItem={newData.length} paginate={paginate} />
+      {/* <Pagination itemPerPage={itemPerPage} totalItem={newData.length} paginate={paginate} /> */}
     </div>
   );
 }
