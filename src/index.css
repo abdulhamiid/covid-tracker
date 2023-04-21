@@ -63,6 +63,12 @@ li {
   list-style: none;
 }
 
+button {
+  color: #fff;
+  background: none;
+  border: none;
+}
+
 .navBar {
   position: fixed;
   width: 100%;
@@ -162,9 +168,9 @@ code {
 }
 
 .statistics img {
-  width: 56%;
+  width: 36%;
   margin: 20px auto;
-  height: 100px;
+  height: auto;
 }
 
 .statistics > div {
@@ -200,8 +206,11 @@ code {
   padding: 10px 20px;
   border: none;
   font-size: 16px;
-  margin-top: 15px;
+  margin-top: 30px;
   border-radius: 60px;
+  position: absolute;
+  top: -22px;
+  right: 40px;
 }
 
 .searchContainer input:focus {
