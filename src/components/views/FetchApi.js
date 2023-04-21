@@ -21,42 +21,36 @@ function FetchApi({ continent }) {
     item.country.toLowerCase().includes(query.toLowerCase())
   ));
 
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [itemPerPage] = useState(5);
-
-  // pagination
-  // const indexOfLastItem = currentPage * itemPerPage;
-  // const indexOfFirstItem = indexOfLastItem - itemPerPage;
-  // const currentResult = filteredResult.slice(indexOfFirstItem, indexOfLastItem);
-
-  // Change page
-  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
   return (
     <div className={styles.wrapper}>
       <Nav />
       <Search query={query} onSearch={onSearch} />
-      <div>
-        <h1>{continent}</h1>
+      <div className={styles.headerOne}>
         <div>
-          <h3>List of Countries</h3>
-          <h3>Covid-19 Stat</h3>
+          <img alt="asia" src="../src/components/img/asia.png" />
         </div>
-        <ul className={styles.wrapperUL}>
-          {filteredResult.map((item) => (
-            <li key={item.country} className={styles.countryName}>
-              <h4>{item.country}</h4>
-              <div>
-                <p>{`${item.cases.toLocaleString()} cases`}</p>
-                <Link to={`/cases/${item.country}`} id={newData.indexOf(item)} exact="true">
-                  <BsArrowRightCircle />
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <h1>{continent}</h1>
+          <p>x views</p>
+        </div>
       </div>
-      {/* <Pagination itemPerPage={itemPerPage} totalItem={newData.length} paginate={paginate} /> */}
+
+      <div className={styles.headerTwo}>
+        <h2>STATS BY COUNTRY</h2>
+      </div>
+      <ul className={styles.listWrapper}>
+        {filteredResult.map((item) => (
+          <li key={item.country} className={styles.countryName}>
+            <Link to={`/cases/${item.country}`} id={newData.indexOf(item)} exact="true">
+              <BsArrowRightCircle />
+            </Link>
+            <div>
+              <h4>{item.country}</h4>
+              <p>{`${item.cases.toLocaleString()} cases`}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
