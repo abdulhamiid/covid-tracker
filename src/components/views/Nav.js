@@ -1,7 +1,6 @@
 import React from 'react';
-import { AiOutlineLeft } from 'react-icons/ai';
-import { IoIosSearch } from 'react-icons/io';
-import { MdMic } from 'react-icons/md';
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+import { MdSettings } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 
 const Nav = () => {
@@ -12,14 +11,10 @@ const Nav = () => {
       <ul>
         <li>
           <AiOutlineLeft onClick={() => navigate(-1)} />
-        </li>
-        <li className="right-link">
-          <MdMic />
+          <AiOutlineRight onClick={() => navigate(1)} />
         </li>
         <li>
-          <button type="button" onClick={() => { document.querySelector('.searchContainer').classList.toggle('hide'); }}>
-            <IoIosSearch />
-          </button>
+          <MdSettings />
         </li>
       </ul>
     </nav>
