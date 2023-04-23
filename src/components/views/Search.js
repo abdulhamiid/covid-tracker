@@ -5,7 +5,7 @@ function Search(props) {
   const { query, onSearch } = props;
 
   return (
-    <div className="searchContainer hide">
+    <div className="searchContainer">
       <input
         type="text"
         placeholder="search country"
