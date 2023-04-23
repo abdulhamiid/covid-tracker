@@ -202,13 +202,21 @@ code {
   background: rgba(207, 66, 120, 0.3);
 }
 
+.listWrapper li:nth-child(4n-2) {
+  background-color: #3f61a4;
+}
+
+.listWrapper li:nth-child(4n-1){
+  background-color: #3f61a4;
+}
+
 .searchContainer input {
   padding: 10px 20px;
   border: none;
   font-size: 16px;
   margin-top: 30px;
   border-radius: 60px;
-  position: absolute;
+  position: fixed;
   top: -22px;
   right: 40px;
 }

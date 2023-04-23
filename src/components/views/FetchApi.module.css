@@ -17,7 +17,7 @@
 
 .listWrapper li {
   background-color: #4268b1;
-  height: 200px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   text-align: right;

@@ -34,15 +34,21 @@
   color: #fff;
 }
 
+
+.continents li:nth-child(4n-2) {
+  background-color: #3f61a4;
+}
+
+.continents li:nth-child(4n-1){
+  background-color: #3f61a4;
+}
+
 @media (min-width: 768px) {
   .continents {
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
   }
 
-  .continents li:nth-child(odd) {
-    background: rgba(92, 3, 42, 0.3);
-  }
 
   .continent {
     height: 350px;
