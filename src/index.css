@@ -33,7 +33,7 @@ body {
 }
 
 #root {
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 a {
@@ -122,10 +122,13 @@ code {
 
 .box {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: 90%;
-  background-position: center center;
+  background-size: calc(75%);
+  background-color: #ff5295;;
+  background-position: 16px 8px;
 }
 
 .dataPage {
@@ -138,27 +141,27 @@ code {
 }
 
 .africa {
-  background-image: url(../src/components/img/africa.png);
+  background-image: url(../public/images/africa.svg);
 }
 
 .asia {
-  background-image: url(../src/components/img/asia.png);
+  background-image: url(../public/images/asia.svg);
 }
 
 .europe {
-  background-image: url(../src/components/img/europe.png);
+  background-image: url(../public/images/europe.svg);
 }
 
 .north-america {
-  background-image: url(../src/components/img/northAmerica.png);
+  background-image: url(../public/images/north_america.svg);
 }
 
 .south-america {
-  background-image: url(../src/components/img/southAmerica.png);
+  background-image: url(../public/images/south_america.svg);
 }
 
 .australia-oceania {
-  background-image: url(../src/components/img/australia.png);
+  background-image: url(../public/images/australia-oceania.svg);
 }
 
 .overlay {
@@ -209,9 +212,9 @@ code {
   padding: 5px 20px;
   border: none;
   font-size: 16px;
-  position: relative;
+  position: fixed;
   width: 55%;
-  top: -16px;
+  top: 9px;
   transform: translate(50%);
   border-radius: 6px;
 }
