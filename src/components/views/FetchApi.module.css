@@ -70,3 +70,10 @@ a svg {
   position: fixed;
   top: 400px;
 }
+
+@media (min-width: 768px) {
+  .headerOne div img {
+    width: 90px;
+    height: 90px;
+  }
+}

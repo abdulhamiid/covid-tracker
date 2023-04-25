@@ -57,4 +57,12 @@
   .continent:nth-child(5) {
     grid-column: 2/3;
   }
+
+  .continents li:nth-child(odd) {
+    background-color: #3f61a4;
+  }
+  
+  .continents li:nth-child(even){
+    background-color: #4268b1;
+  }
 }

@@ -127,7 +127,6 @@ code {
   height: 100%;
   background-repeat: no-repeat;
   background-size: calc(75%);
-  background-color: #ff5295;;
   background-position: 16px 8px;
 }
 
@@ -137,7 +136,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 40px;
 }
 
 .africa {
@@ -184,7 +183,7 @@ code {
 }
 
 .data > li {
-  background-color: #4268b1;
+  /* background-color: #4268b1; */
   border-radius: 20px;
   padding: 10px 5px;
   margin: 10px;
@@ -198,14 +197,6 @@ code {
 
 .data p {
   color: #fff;
-}
-
-.data > li:nth-child(4n-2) {
-  background-color: #3f61a4;
-}
-
-.data > li:nth-child(4n-1) {
-  background-color: #3f61a4;
 }
 
 .searchContainer input {
@@ -226,17 +217,13 @@ code {
 @media (min-width: 768px) {
   .searchContainer input {
     margin-top: 10px;
-    width: 40%;
     font-size: 17px;
-    border: none;
+    width: 20%;
+    top: 3px;
   }
 
   #root {
     margin-top: 40px;
-  }
-
-  .navBar {
-    padding: 30px;
   }
 
   .navBar ul {
@@ -251,7 +238,7 @@ code {
     font-size: 30px;
   }
 
-  .light {
-    background: rgba(92, 3, 42, 0);
+  .dataPage {
+    padding-top: 70px;
   }
 }
