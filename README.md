@@ -20,10 +20,6 @@ Loom video- [watch](https://www.loom.com/share/b2dcada22a54415f9082a78937da754b?
 ## Screenshots
 ![screenshot](./src/components/img/desktop1.PNG)
 ![screenshot](./src/components/img/desktop2.PNG)
-![screenshot](./src/components/img/desktop3.PNG)
-![screenshot](./src/components/img/mobile1.PNG)
-![screenshot](./src/components/img/mobile2.PNG)
-![screenshot](./src/components/img/mobile3.PNG)
 ### Clone this repository
 
 To clone the repo run:
