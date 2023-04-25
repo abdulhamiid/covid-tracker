@@ -58,7 +58,7 @@ a svg {
   background-color: #3f61a4;
 }
 
-.listWrapper li:nth-child(4n-1){
+.listWrapper li:nth-child(4n-1) {
   background-color: #3f61a4;
 }
 
