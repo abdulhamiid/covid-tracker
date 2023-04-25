@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { BsArrowRightCircle } from 'react-icons/bs';
-import Pagination from './Pagination';
 import styles from './FetchApi.module.css';
 import Nav from './Nav';
 import Search from './Search';
@@ -22,42 +21,36 @@ function FetchApi({ continent }) {
     item.country.toLowerCase().includes(query.toLowerCase())
   ));
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemPerPage] = useState(5);
-
-  // pagination
-  const indexOfLastItem = currentPage * itemPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemPerPage;
-  const currentResult = filteredResult.slice(indexOfFirstItem, indexOfLastItem);
-
-  // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
   return (
     <div className={styles.wrapper}>
       <Nav />
       <Search query={query} onSearch={onSearch} />
-      <div>
-        <h1>{continent}</h1>
+      <div className={styles.headerOne}>
         <div>
-          <h3>List of Countries</h3>
-          <h3>Covid-19 Stat</h3>
+          <img src={`/images/${continent.includes(' ') ? continent.replace(' ', '_').toLowerCase() : continent.toLowerCase()}.svg`} alt={continent} />
         </div>
-        <ul className={styles.wrapperUL}>
-          {currentResult.map((item) => (
-            <li key={item.country} className={styles.countryName}>
-              <h4>{item.country}</h4>
-              <div>
-                <p>{`${item.cases.toLocaleString()} cases`}</p>
-                <Link to={`/cases/${item.country}`} id={newData.indexOf(item)} exact="true">
-                  <BsArrowRightCircle />
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <h1>{continent}</h1>
+          <p>x views</p>
+        </div>
       </div>
-      <Pagination itemPerPage={itemPerPage} totalItem={newData.length} paginate={paginate} />
+
+      <div className={styles.headerTwo}>
+        <h2>STATS BY COUNTRY</h2>
+      </div>
+      <ul className={styles.listWrapper}>
+        {filteredResult.map((item) => (
+          <li key={item.country} className={styles.countryName}>
+            <Link to={`/cases/${item.country}`} id={newData.indexOf(item)} exact="true">
+              <BsArrowRightCircle />
+            </Link>
+            <div>
+              <h4>{item.country}</h4>
+              <p>{`${item.cases.toLocaleString()} cases`}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

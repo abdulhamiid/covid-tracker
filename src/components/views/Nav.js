@@ -1,25 +1,25 @@
 import React from 'react';
-import { AiOutlineLeft } from 'react-icons/ai';
-import { IoMdSettings } from 'react-icons/io';
-import { RiMicFill } from 'react-icons/ri';
-import { NavLink } from 'react-router-dom';
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+import { MdSettings } from 'react-icons/md';
+import { useNavigate, NavLink } from 'react-router-dom';
 
-const Nav = () => (
-  <nav className="navBar">
-    <ul>
-      <li>
-        <NavLink to="/">
-          <AiOutlineLeft />
-          Home
-        </NavLink>
-      </li>
-      <li className="right-link">
-        <RiMicFill />
-        <NavLink to="/about">
-          <IoMdSettings />
-        </NavLink>
-      </li>
-    </ul>
-  </nav>
-);
+const Nav = () => {
+  const navigate = useNavigate();
+
+  return (
+    <nav className="navBar">
+      <ul>
+        <li>
+          <AiOutlineLeft onClick={() => navigate(-1)} />
+          <AiOutlineRight onClick={() => navigate(1)} />
+        </li>
+        <li>
+          <NavLink to="/about">
+            <MdSettings />
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 export default Nav;

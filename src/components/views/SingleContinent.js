@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import FetchApi from './FetchApi';
+import Nav from './Nav';
 
 const SingleContinent = () => {
   const { continentId } = useParams();
@@ -18,7 +19,10 @@ const SingleContinent = () => {
   }
 
   return (
-    <FetchApi continent={continent} />
+    <>
+      <Nav />
+      <FetchApi continent={continent} />
+    </>
   );
 };
 

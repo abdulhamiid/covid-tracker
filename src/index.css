@@ -12,13 +12,32 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fd5294;
+  background-color: #5689e4;
   display: flex;
   flex-direction: column;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
 #root {
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 a {
@@ -28,11 +47,33 @@ a {
 
 .navBar svg {
   font-size: 18px;
+  margin: auto 10px;
+}
+
+.data > li {
+  border-radius: 20px;
+  padding: 10px 5px;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #3f61a4;
 }
 
 svg:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.data > li svg {
+  font-size: 30px;
+  color: #f00;
+}
+
+.aboutPage a svg {
+  color: #000;
+}
+
+.navBar ul li svg:first-child {
+  margin-right: 10px;
 }
 
 .aboutPage {
@@ -46,23 +87,21 @@ svg:hover {
 
 .aboutPage a {
   color: #fff;
-}
-
-.flex {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 4px;
 }
 
-li {
-  list-style: none;
+button {
+  color: #fff;
+  background: none;
+  border: none;
 }
 
 .navBar {
   position: fixed;
   width: 100%;
-  background-color: #e84a88;
+  background-color: #4369b2;
   padding: 15px;
   top: 0;
 }
@@ -103,10 +142,12 @@ code {
 
 .box {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: 90%;
-  background-position: center center;
+  background-size: calc(75%);
+  background-position: 16px 8px;
 }
 
 .dataPage {
@@ -115,68 +156,36 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.dataPage h2 {
+  font-size: 16px;
 }
 
 .africa {
-  background-image: url(../src/components/img/africa.png);
+  background-image: url(../public/images/africa.svg);
 }
 
 .asia {
-  background-image: url(../src/components/img/asia.png);
+  background-image: url(../public/images/asia.svg);
 }
 
 .europe {
-  background-image: url(../src/components/img/europe.png);
+  background-image: url(../public/images/europe.svg);
 }
 
 .north-america {
-  background-image: url(../src/components/img/northAmerica.png);
+  background-image: url(../public/images/north_america.svg);
 }
 
 .south-america {
-  background-image: url(../src/components/img/southAmerica.png);
+  background-image: url(../public/images/south_america.svg);
 }
 
 .australia-oceania {
-  background-image: url(../src/components/img/australia.png);
-}
-
-.bgLight {
-  background-color: rgb(255, 68, 0);
-  width: 100%;
-  height: 100%;
-}
-
-.statistics {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: 50px auto 20px auto;
-}
-
-.statistics img {
-  width: 56%;
-  margin: 20px auto;
-  height: 100px;
-}
-
-.statistics > div {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  text-align: left;
-  color: #fff;
-  margin-top: 20px;
-}
-
-.statistics > div ul li {
-  padding: 10px;
-}
-
-.statistics > div ul li:nth-child(even) {
-  background-color: #cf4278;
+  background-image: url(../public/images/australia-oceania.svg);
 }
 
 .overlay {
@@ -184,40 +193,62 @@ code {
   height: 100%;
 }
 
-.dark {
-  background: rgba(219, 70, 129, 0.8);
+.cases {
+  width: 80%;
+  margin: 50px auto 0 auto;
+  text-align: center;
 }
 
-.light {
-  background: rgba(207, 66, 120, 0.3);
+.data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.data p {
+  color: #fff;
 }
 
 .searchContainer input {
-  padding: 10px 20px;
+  padding: 5px 20px;
   border: none;
   font-size: 16px;
-  margin-top: 15px;
-  border-radius: 60px;
+  position: fixed;
+  width: 55%;
+  top: 9px;
+  transform: translate(50%);
+  border-radius: 6px;
 }
 
 .searchContainer input:focus {
   outline: none;
 }
 
+@media (min-width: 568px) {
+  .box {
+    background-size: calc(45%);
+    background-position: 6px 24px;
+  }
+
+  .searchContainer input {
+    top: 9px;
+    transform: translate(55%);
+  }
+}
+
 @media (min-width: 768px) {
   .searchContainer input {
     margin-top: 10px;
-    width: 40%;
     font-size: 17px;
-    border: none;
+    width: 20%;
+    left: 100px;
+    top: 3px;
   }
 
   #root {
     margin-top: 40px;
-  }
-
-  .navBar {
-    padding: 30px;
   }
 
   .navBar ul {
@@ -232,21 +263,20 @@ code {
     font-size: 30px;
   }
 
-  .statistics img {
-    width: 20%;
-    height: 150px;
+  .dataPage {
+    justify-content: center;
+    margin-top: 0;
   }
 
-  .statistics > div {
-    width: 50%;
-    margin: 30px auto;
+  .dataPage h2 {
+    font-size: 20px;
   }
 
-  .dark {
-    background: rgba(92, 3, 42, 0);
+  .data > li:nth-child(even) {
+    background-color: #3f61a4;
   }
 
-  .light {
-    background: rgba(92, 3, 42, 0);
+  .data > li:nth-child(odd) {
+    background-color: #3f61a4;
   }
 }

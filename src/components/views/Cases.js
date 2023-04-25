@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { FaViruses } from 'react-icons/fa';
 import Nav from './Nav';
 
 const Cases = () => {
@@ -14,23 +15,32 @@ const Cases = () => {
   return (
     <>
       <Nav />
-      <div className="statistics">
+      <div className="cases">
         <img src={flag} alt="flag" />
         <h1>{country}</h1>
         <div>
-          <ul>
-            <li>Continent</li>
-            <li>Population</li>
-            <li>Cases</li>
-            <li>Recorvered</li>
-            <li>Deaths</li>
-          </ul>
-          <ul>
-            <li>{continent}</li>
-            <li>{population.toLocaleString()}</li>
-            <li>{cases.toLocaleString()}</li>
-            <li>{recovered.toLocaleString()}</li>
-            <li>{deaths.toLocaleString()}</li>
+          <ul className="data">
+            <li>
+              <p>Continent</p>
+              <p>{continent}</p>
+            </li>
+            <li>
+              <p>Population</p>
+              <p>{population.toLocaleString()}</p>
+            </li>
+            <li>
+              <p>Cases</p>
+              <p>{cases.toLocaleString()}</p>
+            </li>
+            <li>
+              <p>Recorvered</p>
+              <p>{recovered.toLocaleString()}</p>
+            </li>
+            <li>
+              <FaViruses />
+              <p>Deaths</p>
+              <p>{deaths.toLocaleString()}</p>
+            </li>
           </ul>
         </div>
       </div>
