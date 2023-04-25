@@ -32,6 +32,10 @@ body {
   display: none;
 }
 
+li {
+  list-style: none;
+}
+
 #root {
   margin-top: 5px;
 }
@@ -46,13 +50,30 @@ a {
   margin: auto 10px;
 }
 
-.navBar ul li svg:first-child {
-  margin-right: 10px;
+.data > li {
+  border-radius: 20px;
+  padding: 10px 5px;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #3f61a4;
 }
 
 svg:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.data > li svg {
+  font-size: 30px;
+  color: #f00;
+}
+
+.aboutPage a svg {
+  color: #000;
+}
+
+.navBar ul li svg:first-child {
+  margin-right: 10px;
 }
 
 .aboutPage {
@@ -66,10 +87,9 @@ svg:hover {
 
 .aboutPage a {
   color: #fff;
-}
-
-li {
-  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 button {
@@ -136,7 +156,12 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.dataPage h2 {
+  font-size: 16px;
 }
 
 .africa {
@@ -182,29 +207,8 @@ code {
   justify-content: center;
 }
 
-.data > li {
-  /* background-color: #4268b1; */
-  border-radius: 20px;
-  padding: 10px 5px;
-  margin: 10px;
-  box-sizing: border-box;
-}
-
-.data > li svg {
-  font-size: 30px;
-  color: #f00;
-}
-
 .data p {
   color: #fff;
-}
-
-.data > li:nth-child(4n-2) {
-  background-color: #3f61a4;
-}
-
-.data > li:nth-child(4n-1) {
-  background-color: #3f61a4;
 }
 
 .searchContainer input {
@@ -222,11 +226,24 @@ code {
   outline: none;
 }
 
+@media (min-width: 568px) {
+  .box {
+    background-size: calc(45%);
+    background-position: 6px 24px;
+  }
+
+  .searchContainer input {
+    top: 9px;
+    transform: translate(55%);
+  }
+}
+
 @media (min-width: 768px) {
   .searchContainer input {
     margin-top: 10px;
     font-size: 17px;
     width: 20%;
+    left: 100px;
     top: 3px;
   }
 
@@ -247,13 +264,18 @@ code {
   }
 
   .dataPage {
-    margin-top: 70px;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .dataPage h2 {
+    font-size: 20px;
   }
 
   .data > li:nth-child(even) {
     background-color: #3f61a4;
   }
-  
+
   .data > li:nth-child(odd) {
     background-color: #3f61a4;
   }
