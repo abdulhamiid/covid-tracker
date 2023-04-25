@@ -136,7 +136,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .africa {
@@ -199,6 +199,14 @@ code {
   color: #fff;
 }
 
+.data > li:nth-child(4n-2) {
+  background-color: #3f61a4;
+}
+
+.data > li:nth-child(4n-1) {
+  background-color: #3f61a4;
+}
+
 .searchContainer input {
   padding: 5px 20px;
   border: none;
@@ -239,6 +247,14 @@ code {
   }
 
   .dataPage {
-    padding-top: 70px;
+    margin-top: 70px;
+  }
+
+  .data > li:nth-child(even) {
+    background-color: #3f61a4;
+  }
+  
+  .data > li:nth-child(odd) {
+    background-color: #3f61a4;
   }
 }
