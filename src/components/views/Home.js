@@ -63,6 +63,9 @@ function Home() {
         </h1>
         <p>Statistics</p>
       </div>
+      <div className={styles.headerTwo}>
+        <h2>ALL STATS</h2>
+      </div>
       <ul className={styles.continents}>
         {continent.map((item) => (
           <li key={item.id} className={styles.continent}>

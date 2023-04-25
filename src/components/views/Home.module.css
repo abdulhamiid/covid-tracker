@@ -8,16 +8,26 @@
   letter-spacing: 4px;
 }
 
-.homePage > div {
-  margin: 20px 0;
-}
-
 .homeHeader {
   letter-spacing: 5px;
 }
 
+.headerTwo {
+  background-color: #36558d;
+  margin: 0;
+  text-align: left;
+  padding: 5px 10px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.headerTwo h2 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
 .continents {
-  margin: 30px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -27,6 +37,7 @@
   height: 200px;
   display: flex;
   justify-content: center;
+  background-color: #4268b1;
   align-items: center;
 }
 
@@ -34,21 +45,24 @@
   color: #fff;
 }
 
+.continent li {
+  background-color: #4268b1;
+}
 
 .continents li:nth-child(4n-2) {
   background-color: #3f61a4;
 }
 
-.continents li:nth-child(4n-1){
+.continents li:nth-child(4n-1) {
   background-color: #3f61a4;
 }
 
 @media (min-width: 768px) {
   .continents {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
+    align-items: center;
   }
-
 
   .continent {
     height: 350px;
@@ -61,8 +75,8 @@
   .continents li:nth-child(odd) {
     background-color: #3f61a4;
   }
-  
-  .continents li:nth-child(even){
+
+  .continents li:nth-child(even) {
     background-color: #4268b1;
   }
 }
