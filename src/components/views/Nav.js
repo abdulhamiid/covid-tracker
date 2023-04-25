@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import { MdSettings } from 'react-icons/md';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -14,7 +14,9 @@ const Nav = () => {
           <AiOutlineRight onClick={() => navigate(1)} />
         </li>
         <li>
-          <MdSettings />
+          <NavLink to="/about">
+            <MdSettings />
+          </NavLink>
         </li>
       </ul>
     </nav>
