@@ -1,8 +1,19 @@
 .headerOne {
   margin-top: 45px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   padding: 20px;
-  justify-content: space-around;
+}
+
+.headerOne div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerOne div img {
+  width: 60px;
+  height: 60px;
 }
 
 .headerTwo {
@@ -17,13 +28,17 @@
 
 .listWrapper li {
   background-color: #4268b1;
-  height: 120px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   text-align: right;
   justify-content: space-between;
   padding: 10px;
   color: #fff;
+}
+
+.listWrapper li h4 {
+  margin-bottom: 14px;
 }
 
 a {
@@ -45,4 +60,13 @@ a svg {
 
 .listWrapper li:nth-child(4n-1){
   background-color: #3f61a4;
+}
+
+.nav-active {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 5px -1px 12px -5px grey;
+  border-radius: 0;
+  position: fixed;
+  top: 400px;
 }

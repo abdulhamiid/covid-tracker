@@ -27,7 +27,7 @@ function FetchApi({ continent }) {
       <Search query={query} onSearch={onSearch} />
       <div className={styles.headerOne}>
         <div>
-          <img alt="asia" src="../src/components/img/asia.png" />
+          <img src={`/images/${continent.includes(' ') ? continent.replace(' ', '_').toLowerCase() : continent.toLowerCase()}.svg`} alt={continent} />
         </div>
         <div>
           <h1>{continent}</h1>
