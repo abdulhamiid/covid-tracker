@@ -1,4 +1,4 @@
-# covid-19
+# covid-tracker
 
 > This project is a web application the corona virus pandemic showing the world statistics, fetching the data from an API.
 
