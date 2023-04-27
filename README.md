@@ -24,7 +24,7 @@ Loom video- [watch](https://www.loom.com/share/b2dcada22a54415f9082a78937da754b?
 
 To clone the repo run:
 ```
-git clone https://github.com/abdulhamiid/covid-19.git  
+git clone https://github.com/abdulhamiid/covid-tracker.git 
 ```
 To access the cloned directory, run:
 ```
